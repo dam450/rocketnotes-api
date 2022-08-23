@@ -42,8 +42,5 @@ app.use( ( error,  request, response, next ) => {
 const PORT = 3333
 
 app.listen(PORT, () => {
-  console.info(`
-  -------------------------------------
-  🚀 Server is listening on port ${PORT}
-  -------------------------------------`)
+  console.info(`[Server] is listening on port ${PORT}  📌`)
 })
