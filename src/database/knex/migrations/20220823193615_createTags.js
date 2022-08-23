@@ -1,5 +1,5 @@
 
-exports.up = knex => knex.schema.createTags("tags", table => {
+exports.up = knex => knex.schema.createTable("tags", table => {
   table.increments("id")
   
   table.integer("note_id").references("id").inTable("notes").onDelete("CASCADE")
@@ -10,4 +10,4 @@ exports.up = knex => knex.schema.createTags("tags", table => {
 }) 
 
 
-exports.down = knex => knex.schema.dropTags("tags")
+exports.down = knex => knex.schema.dropTable("tags")
